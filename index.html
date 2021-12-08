@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crecer y encoger elementos</title>
+    <style>
+        .box-container {
+            display: flex;
+            height: 400px;
+            background-color: cadetblue;
+        }
+
+        .left-element {
+            flex-basis: 200px;
+            height: 40%;
+            background-color: coral;
+            flex-shrink: 3;
+            flex-grow: 3;
+        }
+
+
+        .right-element {
+            flex-basis: 200px;
+            height: 80%;
+            background-color: darkgoldenrod;
+            flex-shrink: 1;
+            flex-grow: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="box-container">
+        <div class="left-element">
+            <h2>IZQUIERDO</h2>
+            <p>flex-basis: 200px </p>
+            <p>shrink: 3 --> Se encoge 3 veces que DERECHO si widthContainer "<" 400px </p>
+                    <p>flex-grow:3 --> Crece 3 veces que DERECHO si widthContainer > 400px </p>
+        </div>
+        <div class="right-element">
+            <h2>DERECHO</h2>
+            <p>flex-basis: 200px </p>
+            <p>shrink: 1 --> Se encoje 1/3 parte que IZQUIERDO si widthContainer < 400px</p>
+            <p>flex-grow:1 --> Crece 1/3 parte IZQUIERDO widthContainer > 400px </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
